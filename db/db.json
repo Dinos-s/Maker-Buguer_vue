@@ -1,0 +1,81 @@
+{
+    "ingredientes":{
+        "paes": [
+            {
+                "id": 1,
+                "tipo": "Italiano Branco"
+            },
+            {
+                "id": 2,
+                "tipo":"3 Queijos"
+            },
+            {
+                "id": 3,
+                "tipo":"Parmesão e Orégano"
+            },
+            {
+                "id": 4,
+                "tipo":"Intagral"
+            }
+        ],
+        "carnes": [
+            {
+                "id": 1,
+                "tipo": "Maminha"
+            },
+            {
+                "id": 2,
+                "tipo": "Alcatara"
+            },            
+            {
+                "id": 3,
+                "tipo": "Picanha"
+            },            
+            {
+                "id": 4,
+                "tipo": "Veggie burger"
+            }
+        ],
+        "opcionais":[
+            {
+                "id": 1,
+                "tipo": "Bacon"
+            },
+            {
+                "id": 2,
+                "tipo": "Cheddar"
+            },
+            {
+                "id": 3,
+                "tipo": "Salame"
+            },
+            {
+                "id": 4,
+                "tipo": "Tomate"
+            },
+            {
+                "id": 5,
+                "tipo": "Cebola roxa"
+            },
+            {
+                "id": 6,
+                "tipo": "Pepino"
+            }
+        ]
+    },
+    "status":[
+        {
+            "id": 1,
+            "tipo": "Solicitado"
+        },
+        {
+            "id": 2,
+            "tipo": "Em Produção"
+        },
+        {
+            "id": 3,
+            "tipo": "Finalizado"
+        }
+    ],
+    "burgers":[]
+}
