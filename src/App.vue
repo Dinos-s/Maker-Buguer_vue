@@ -4,10 +4,6 @@
   <Footer/>
 </template>
 
-<style>
-
-</style>
-
 <script>
   import Navbar from "./components/Navbar.vue";
   import Footer from './components/Footer.vue';
@@ -44,5 +40,21 @@
     font-size: 42px;
     margin-bottom: 30px;
     color: #222;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #222;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #fcba03;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #faf9f7;
   }
 </style>
