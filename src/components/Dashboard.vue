@@ -1,6 +1,7 @@
 <template>
     <div id="burger-table">
         <div>
+            <Msg :msg="msg" v-show="msg"/>
             <div id="burger-table-heading">
                 <div class="order-id">#:</div>
                 <div>Cliente:</div>
@@ -22,9 +23,9 @@
                     </ul>
                 </div>
                 <div>
-                    <select name="status" class="status">
+                    <select name="status" class="status" @change="updateBurger($event, burger.id)">
                         <option value="">Status</option>
-                        <option v-for="s in status" :key="s.id" value="s.tipo" :selected="burger.status == s.tipo">{{ s.tipo }}</option>
+                        <option v-for="s in status" :key="s.id" :value="s.tipo" :selected="burger.status == s.tipo">{{ s.tipo }}</option>
                     </select>
                     <button class="delete-btn" @click="deleteBurger(burger.id)">Cancelar</button>
                 </div>
@@ -92,13 +93,15 @@
 </style>
 
 <script>
+import Msg from "./Messages.vue";
     export default{
         name: "Dashboard",
         data() {
             return {
                 burgers: null,
                 burger_id: null,
-                status: []
+                status: [],
+                msg: null
             }
         },
         methods: {
@@ -129,13 +132,35 @@
 
                 const res = await req.json();
 
-                //msg
+                this.msg = `Pedido Removido.`
+
+                setTimeout(() => {
+                    this.msg = ""
+                }, 3000);
 
                 this.getPedidos()
+            },
+            async updateBurger(event, id) {
+                const option = event.target.value;
+
+                const dataJason = JSON.stringify({ status: option })
+
+                const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+                    method: "PATCH",
+                    headers: {"Content-Type": "application/json"},
+                    body: dataJason
+                })
+
+                const res = await req.json()
+
+                this.msg = `Pedido N°${res.id}, foi atualizado para ${res.status}!`
             }
         }, 
         mounted() {
             this.getPedidos();
+        },
+        components: {
+            Msg,
         }
     }
 </script>

@@ -84,11 +84,11 @@
   "burgers": [
     {
       "nome": "lucas",
-      "carne": "Alcatara",
-      "pao": "3 Queijos",
+      "carne": "Veggie burger",
+      "pao": "Italiano Branco",
       "opcionais": [
-        "Cheddar",
         "Tomate",
+        "Pepino",
         "Cebola roxa"
       ],
       "status": "Solicitado",
