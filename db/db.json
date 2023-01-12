@@ -83,15 +83,15 @@
   ],
   "burgers": [
     {
-      "nome": "lucas",
+      "nome": "pedro luiz",
       "carne": "Veggie burger",
-      "pao": "Italiano Branco",
+      "pao": "Intagral",
       "opcionais": [
+        "Cebola roxa",
         "Tomate",
-        "Pepino",
-        "Cebola roxa"
+        "Pepino"
       ],
-      "status": "Solicitado",
+      "status": "Em Produção",
       "id": 1
     }
   ]
